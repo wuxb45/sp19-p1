@@ -16,6 +16,7 @@ time_nsec(void)
   static void
 run(const long nkeys)
 {
+  printf("%ld keys\n", nkeys);
   struct bptree * const tree = bptree_create();
   const long range = nkeys * 8;
 
