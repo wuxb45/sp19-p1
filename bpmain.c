@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "tree.h"
+#include "bptree.h"
 typedef unsigned long ulong;
 
   static ulong

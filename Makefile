@@ -1,7 +1,10 @@
-main.out : main.c tree.c tree.h
-	gcc -O3 -o main.out main.c tree.c
-#	gcc -g -o main.out main.c tree.c
+.PHONY:all clean
+all : bpmain.out bemain.out
 
-.PHONY:clean
+bpmain.out : bpmain.c bptree.c bptree.h
+	gcc -O3 -o bpmain.out bpmain.c bptree.c
+bemain.out : bemain.c betree.c betree.h
+	gcc -O3 -o bemain.out bemain.c betree.c
+
 clean :
-	rm -f main.out
+	rm -f *.out
