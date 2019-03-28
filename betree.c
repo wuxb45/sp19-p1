@@ -12,7 +12,7 @@ struct entry {
   long key;
   union {
     struct node * child; // interior node
-    long value; // leaf node
+    long value; // for leaf or buffer
   };
 };
 
@@ -22,7 +22,7 @@ struct entry {
 struct node {
   long type;         // 0: leaf;   >= 1: interior
   struct node * parent; // root's parent is NULL
-  long nkeys;   // interior node: keys in the buffer
+  long nkeys;   // keys in the leaf or buffer
   long intr_npivots; // interior nodes only
   union {
     struct entry kvs[FANOUT]; // leaf nodes only
