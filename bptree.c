@@ -14,7 +14,7 @@ struct entry {
   };
 };
 
-#define FANOUT (32)
+#define FANOUT (64)
 struct node {
   long nkeys;
   long type; // 0: leaf; 1: internal
